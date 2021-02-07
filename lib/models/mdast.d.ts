@@ -44,6 +44,8 @@ export interface Table extends Parent {
 export interface TableRow extends Parent {
     type: "tableRow";
     children: RowContent[];
+    header?: boolean;
+    footer?: boolean;
 }
 export interface TableCell extends Parent {
     type: "tableCell";
