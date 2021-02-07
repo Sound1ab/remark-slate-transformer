@@ -177,10 +177,11 @@ function createTable(node: mdast.Table, deco: Decoration) {
 export type TableRow = ReturnType<typeof createTableRow>;
 
 function createTableRow(node: mdast.TableRow, deco: Decoration) {
-  const { type, children } = node;
-  console.log('creating table row')
+  const { type, children, header, footer } = node;
   return {
     type,
+    header,
+    footer,
     children: convertNodes(children, deco),
   };
 }
