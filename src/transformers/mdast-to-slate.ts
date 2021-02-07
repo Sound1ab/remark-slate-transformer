@@ -178,6 +178,7 @@ export type TableRow = ReturnType<typeof createTableRow>;
 
 function createTableRow(node: mdast.TableRow, deco: Decoration) {
   const { type, children } = node;
+  console.log('creating table row')
   return {
     type,
     children: convertNodes(children, deco),
