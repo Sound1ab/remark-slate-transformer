@@ -49,6 +49,7 @@ export interface TableRow extends Parent {
 }
 export interface TableCell extends Parent {
     type: "tableCell";
+    header?: boolean;
     children: PhrasingContent[];
 }
 export interface HTML extends Literal {

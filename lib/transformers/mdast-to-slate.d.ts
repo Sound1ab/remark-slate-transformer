@@ -58,6 +58,7 @@ declare function createTableRow(node: mdast.TableRow, deco: Decoration): {
 export declare type TableCell = ReturnType<typeof createTableCell>;
 declare function createTableCell(node: mdast.TableCell, deco: Decoration): {
     type: "tableCell";
+    header: boolean | undefined;
     children: slateLib.Node[];
 };
 export declare type Html = ReturnType<typeof createHtml>;
