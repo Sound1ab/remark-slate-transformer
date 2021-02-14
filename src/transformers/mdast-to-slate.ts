@@ -189,10 +189,11 @@ function createTableRow(node: mdast.TableRow, deco: Decoration) {
 export type TableCell = ReturnType<typeof createTableCell>;
 
 function createTableCell(node: mdast.TableCell, deco: Decoration) {
-  const { type, children, header } = node;
+  const { type, children, header, index } = node;
   return {
     type,
     header,
+    index,
     children: convertNodes(children, deco),
   };
 }
